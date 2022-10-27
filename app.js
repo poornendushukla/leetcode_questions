@@ -16,9 +16,10 @@ app.use('/leetcode',feedRoutes)
 app.use('/auth',authRoutes)
 app.use((error,req,res,next)=>{
     const {statusCode,message,data} = error
+    console.log("error",statusCode)
     res.status(statusCode).json({message:message,data:data})
 })
-mongoose.connect('mongodb+srv://poornendu:iYsp8oSFV7tCCSmv@cluster0.gwipa.mongodb.net/Leetcode_Question?retryWrites=true&w=majority')
+mongoose.connect('')
     .then(result=>{
         console.log("connected")
         app.listen(8081)
