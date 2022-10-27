@@ -5,7 +5,7 @@ const {body} = require('express-validator')
 const User = require('../model/user')
 
 //Login
-router.post("/login")
+router.post("/login",AuthController.login)
 
 //signup
 router.put("/signup",[

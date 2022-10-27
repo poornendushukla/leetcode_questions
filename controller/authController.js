@@ -28,3 +28,31 @@ exports.signUp = (req,res,next)=>{
             throw err 
         })
 }
+
+exports.login = (req,res,next)=>{
+    const {email,password} = req.body
+    let loadUser;
+    User.findOne({email:email}).then(user=>{
+        if(!user){
+            const error = new Error("email or password is incorrect")
+            error.statusCode = 401
+            throw error
+        }
+        loadUser = user
+        return bcrypt.compare(password,user.password)
+    }).then(isEqual=>{
+        if(!isEqual){
+            const error = new Error("email or password is incorrect")
+            error.statusCode = 401
+            throw error
+        }
+        const token = jwt.sign({email:loadUser.email,userId:loadUser._id},'longsecret',{expiresIn:"1h"})
+        res.status(200).json({token:token,userId:loadUser._id.toString()})
+
+    }).catch(err=>{
+        if(!err.statusCode){
+            err.statusCode = 500
+            next(err)
+        }
+    })
+}

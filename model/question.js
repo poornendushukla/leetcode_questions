@@ -23,12 +23,16 @@ const questionSchema = new Schema({
         type:String,
         required:true
     },
+    Difficulty:{
+        type:String,
+        default:""
+    },
     Solution:{
         type:String,
         required:true
     },
-    creator:{
-        type:String,
+    Creator:{
+        type:Schema.Types.ObjectId,
         required:true
     }
 })
