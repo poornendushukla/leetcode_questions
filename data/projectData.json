@@ -1,0 +1,1541 @@
+[
+  {
+    "Description": "You are given an integer array nums. You are initially positioned at the array's first index, and each element in the array represents your maximum jump length at that position. Return true if you can reach the last index, or false otherwise",
+    "Tag": "Dynamic Programming Easy",
+    "Link": "https://leetcode.com/problems/jump-game/",
+    "Difficulty": "5/10",
+    "Comment": "Very Simple itterative dp approach, where we scan the array from end to start and in doing to we will check whether we can reach to end directly or indirectly. if we can react directly then we will mark it as end-reachable",
+    "Needs revisit rating": 1,
+    "": ""
+  },
+  {
+    "Description": "Given a triangle array, return the minimum path sum from top to bottom.\n\nFor each step, you may move to an adjacent number of the row below. More formally, if you are on index i on the current row, you may move to either index i or index i + 1 on the next row",
+    "Tag": "Dynamic Programming Moderate",
+    "Link": "https://leetcode.com/problems/triangle/",
+    "Difficulty": "6/10",
+    "Comment": "Although the solution is very intutive, and i was able to comeup with an approach relatively faster. but was getting TLE because of some corner cases",
+    "Needs revisit rating": 1,
+    "": ""
+  },
+  {
+    "Description": "You are given an array prices where prices[i] is the price of a given stock on the ith day.\n\nYou want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.\n\nReturn the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.",
+    "Tag": "Dynamic Programming Easy",
+    "Link": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
+    "Difficulty": "4/10",
+    "Comment": "This question although was labelled easy but somehow i ended up looking at the solution. and will have to take a look at it later",
+    "Needs revisit rating": 1,
+    "": ""
+  },
+  {
+    "Description": "Given strings s1, s2, and s3, find whether s3 is formed by an interleaving of s1 and s2.\n\nAn interleaving of two strings s and t is a configuration where they are divided into non-empty substrings such that:\n\ns = s1 + s2 + ... + sn\nt = t1 + t2 + ... + tm\n|n - m| <= 1\nThe interleaving is s1 + t1 + s2 + t2 + s3 + t3 + ... or t1 + s1 + t2 + s2 + t3 + s3 + ...\nNote: a + b is the concatenation of strings a and b.",
+    "Tag": "Dynamic Programming Medium/ --> Medium-Hard",
+    "Link": "https://leetcode.com/problems/interleaving-string/",
+    "Difficulty": "7/10",
+    "Comment": "This question involves a new pattern of recursion where we use interleaving patterns. formula i would mention once i am done with this question.  what we do here in this question is quite interesting ...... so we append the element by element of two string in such  manner\n\nif(i<s1.length()) >> backtrack(s1,i+1,s2,j,res+s1[i])\nif(j<s2.length()) >> backtrack(s1,i,s2,j+1,res+s2[j])\n\nit's not the dynamic programming that makes it a hard problem but rather how we are utilizing the memoization approach",
+    "Needs revisit rating": 6,
+    "": ""
+  },
+  {
+    "Description": "Given an integer array nums, return the length of the longest strictly increasing subsequence.\n\nA subsequence is a sequence that can be derived from an array by deleting some or no elements without changing the order of the remaining elements. For example, [3,6,2,7] is a subsequence of the array [0,3,1,6,2,2,7].",
+    "Tag": "Dynamic Programming Medium",
+    "Link": "https://leetcode.com/problems/longest-increasing-subsequence/submissions/",
+    "Difficulty": "7/10",
+    "Comment": "This question illustrates one of the very basic approach of solving 1D dp problem \nalthough easy but for knowing the solution we have to do couple of more problem with\nalmost similar approach",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "You don't need to read input or print anything. Your task is to complete function minJumps() which takes the array arr and it's size N as input parameters and returns the minimum number of jumps. If not possible returns -1.",
+    "Tag": "Dynamic Programming Medium / GFG",
+    "Link": "https://practice.geeksforgeeks.org/problems/minimum-number-of-jumps-1587115620/1/?page=1&curated[]=4&sortBy=submissions#",
+    "Difficulty": "7/10",
+    "Comment": "Now this problem is similar to the leetcodes\nJump game problem but the time complexity \nexpected here is rather small ie O(n). \nalthough i was able to come up with optimised\napproach but wasn't enough because of the\ntime restraint it wasn't passing few of the test\ncases.",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.",
+    "Tag": "Backtracking problem",
+    "Link": "https://leetcode.com/problems/generate-parentheses/",
+    "Difficulty": "7/10",
+    "Comment": "This question was had similar pattern as of the \ninterleaving string. initailly seemed as intimidating\nbut was able to comeup with an approach",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "Given an integer n, return the number of strings of length n that consist only of vowels (a, e, i, o, u) and are lexicographically sorted.\n\nA string s is lexicographically sorted if for all valid i, s[i] is the same as or comes before s[i+1] in the alphabet",
+    "Tag": "Dynamic Programming",
+    "Link": "https://leetcode.com/problems/count-sorted-vowel-strings/",
+    "Difficulty": "8/10",
+    "Comment": "Backtracking approach i came up very quickly,\nbut the optimisation using dp seems not be \nso intitutive, therefore i need to understand this \npatternd of optimisation",
+    "Needs revisit rating": "needs revisit",
+    "": ""
+  },
+  {
+    "Description": "Given an integer n, return an array ans of length n + 1 such that for each i (0 <= i <= n), ans[i] is the number of 1's in the binary representation of i.",
+    "Tag": "Dynamic Programming Easy",
+    "Link": "https://leetcode.com/problems/counting-bits/",
+    "Difficulty": "5/10",
+    "Comment": "I essently replicated the process where\nI implemented the obvious relation b/w the \nprevious and current element. \nThis solution is passes test cases but not recommended\nRecommended solution to this problem is where the complexity is of O(n).\nbut isn't that obvious tho ---> \ndp[i]= dp[i/2]+i%2;",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "The Tribonacci sequence Tn is defined as follows: \n\nT0 = 0, T1 = 1, T2 = 1, and Tn+3 = Tn + Tn+1 + Tn+2 for n >= 0.\n\nGiven n, return the value of Tn.",
+    "Tag": "Dynamic Programmic Easy",
+    "Link": "https://leetcode.com/problems/n-th-tribonacci-number/submissions/",
+    "Difficulty": "2/10",
+    "Comment": "Simple fibonacci sequence approach",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "You are given an integer array cost where cost[i] is the cost of ith step on a staircase. Once you pay the cost, you can either climb one or two steps.\n\nYou can either start from the step with index 0, or the step with index 1.\n\nReturn the minimum cost to reach the top of the floor.",
+    "Tag": "Dynamic Programmic Easy",
+    "Link": "https://leetcode.com/problems/min-cost-climbing-stairs/",
+    "Difficulty": "3/10",
+    "Comment": "Simple dp sequence only difference is the calling of \nbacktracking function s",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "Longest Common Subsequence",
+    "Tag": "Dynamic Programming Medium",
+    "Link": "https://leetcode.com/problems/longest-common-subsequence/",
+    "Difficulty": "5/10",
+    "Comment": "This very well be a question that can be considered as \nnormal 2D dynamic programming that could give you an insight to \nhow 2D array is used in dp.",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "You are given a string s.\n\nA split is called good if you can split s into two non-empty strings sleft and sright where their concatenation is equal to s (i.e., sleft + sright = s) and the number of distinct letters in sleft and sright is the same.\n\nReturn the number of good splits you can make in s.",
+    "Tag": "HashMap problem medium/easy",
+    "Link": "https://leetcode.com/problems/number-of-good-ways-to-split-a-string/",
+    "Difficulty": "2/10",
+    "Comment": "Problem tagged as dp but wasn't that hard and was \nsolved almost without using dp",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "Given an n x n array of integers matrix, return the minimum sum of any falling path through matrix.\n\nA falling path starts at any element in the first row and chooses the element in the next row that is either directly below or diagonally left/right. Specifically, the next element from position (row, col) will be (row + 1, col - 1), (row + 1, col), or (row + 1, col + 1).",
+    "Tag": "Dynamic Problem medium/easy",
+    "Link": "https://leetcode.com/problems/minimum-falling-path-sum/",
+    "Difficulty": "4/10",
+    "Comment": "Problem was easy but ended up spending a lot of time \nbecause i didn't knew that passing values as reference can make\na lot difference when coming to dp problems",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "There is a broken calculator that has the integer startValue on its display initially. In one operation, you can:\n\nmultiply the number on display by 2, or\nsubtract 1 from the number on display.\nGiven two integers startValue and target, return the minimum number of operations needed to display target on the calculator.",
+    "Tag": "Greedy Medium Easy",
+    "Link": "https://leetcode.com/problems/broken-calculator/",
+    "Difficulty": "3.7/10",
+    "Comment": "This question was simpler than i thought the only difference is not to always think\ndynamic programming.  \nHint : Think Backwards for this",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "You are given an array people where people[i] is the weight of the ith person, and an infinite number of boats where each boat can carry a maximum weight of limit. Each boat carries at most two people at the same time, provided the sum of the weight of those people is at most limit.\n\nReturn the minimum number of boats to carry every given person.",
+    "Tag": "Greedy Medium Easy",
+    "Link": "https://leetcode.com/problems/boats-to-save-people/submissions/",
+    "Difficulty": "4/10",
+    "Comment": "This question was simpler than i thought the only difference is not to always think\ndynamic programming.  \nHint : think of how to to make the right choice such that it will retain the optimum path",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "You have n  tiles, where each tile has one letter tiles[i] printed on it.\n\nReturn the number of possible non-empty sequences of letters you can make using the letters printed on those tiles.",
+    "Tag": "Backtracking problem",
+    "Link": "https://leetcode.com/problems/letter-tile-possibilities/",
+    "Difficulty": "5/10",
+    "Comment": "This question was similar to the permutation problem\nthe only trick was, if you understodd the process\nof building the permutation then you could have done it\nmuch quickly",
+    "Needs revisit rating": "you could visit if you want",
+    "": ""
+  },
+  {
+    "Description": "Given a string s, you can transform every letter individually to be lowercase or uppercase to create another string.\n\nReturn a list of all possible strings we could create. Return the output in any order.",
+    "Tag": "Backtracking problem",
+    "Link": "https://leetcode.com/problems/letter-case-permutation/",
+    "Difficulty": "6/10",
+    "Comment": "Took some time but understood the recursion.",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "Suppose you have n integers labeled 1 through n. A permutation of those n integers perm (1-indexed) is considered a beautiful arrangement if for every i (1 <= i <= n), either of the following is true:\n\nperm[i] is divisible by i.\ni is divisible by perm[i].\nGiven an integer n, return the number of the beautiful arrangements that you can construct.",
+    "Tag": "Backtracking problem",
+    "Link": "https://leetcode.com/problems/beautiful-arrangement/",
+    "Difficulty": "9/10",
+    "Comment": "This question revealed a new process of making permutaion,\nSee permutation as filling up space instead of swapping values\n\n\nAnd this is more intutive than the swapping techniques",
+    "Needs revisit rating": "Needs revisit",
+    "": "revisited on \n4th April 2022"
+  },
+  {
+    "Description": "In a gold mine grid of size m x n, each cell in this mine has an integer representing the amount of gold in that cell, 0 if it is empty.\n\nReturn the maximum amount of gold you can collect under the conditions:\n\nEvery time you are located in a cell you will collect all the gold in that cell.\nFrom your position, you can walk one step to the left, right, up, or down.\nYou can't visit the same cell more than once.\nNever visit a cell with 0 gold.\nYou can start and stop collecting gold from any position in the grid that has some gold",
+    "Tag": "Backtracking problem",
+    "Link": "https://leetcode.com/problems/path-with-maximum-gold/",
+    "Difficulty": "6/10",
+    "Comment": "Intitutive approach of solving the problem, this problem worked as a refresher to backtracking approach",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "Given an array of strings nums containing n unique binary strings each of length n, return a binary string of length n that does not appear in nums. If there are multiple answers, you may return any of them.",
+    "Tag": "Backtracking problem",
+    "Link": "https://leetcode.com/problems/find-unique-binary-string/submissions/",
+    "Difficulty": "5/10",
+    "Comment": "basic backtracking problem",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "Dynamic Problem Start --> Linear",
+    "Tag": "",
+    "Link": "",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "You are climbing a staircase. It takes n steps to reach the top.\n\nEach time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?",
+    "Tag": "Dynamic Programming  Easy",
+    "Link": "https://leetcode.com/problems/climbing-stairs/",
+    "Difficulty": "2/10",
+    "Comment": "Basic backtracking with memoization",
+    "Needs revisit rating": "no need",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "You are given an integer array cost where cost[i] is the cost of ith step on a staircase. Once you pay the cost, you can either climb one or two steps.\n\nYou can either start from the step with index 0, or the step with index 1.\n\nReturn the minimum cost to reach the top of the floor.",
+    "Tag": "Dynamic Programming Easy",
+    "Link": "https://leetcode.com/problems/min-cost-climbing-stairs/",
+    "Difficulty": "2/10",
+    "Comment": "This one although easy and the approach is also clear, but the backward traversal\nseemed more natural and non-trivial.\nSo you start from n-1,n-2 since those are essentially when we have solution \nand backtrack to 0,1 memoizing along the way",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "Alice and Bob take turns playing a game, with Alice starting first.\n\nInitially, there is a number n on the chalkboard. On each player's turn, that player makes a move consisting of:\n\nChoosing any x with 0 < x < n and n % x == 0.\nReplacing the number n on the chalkboard with n - x.\nAlso, if a player cannot make a move, they lose the game.\n\nReturn true if and only if Alice wins the game, assuming both players play optimally.",
+    "Tag": "Dynamic Programming Easy",
+    "Link": "https://leetcode.com/problems/divisor-game/",
+    "Difficulty": "2/11",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "A message containing letters from A-Z can be encoded into numbers using the following mapping:\n\n'A' -> \"1\"\n'B' -> \"2\"\n...\n'Z' -> \"26\"\nTo decode an encoded message, all the digits must be grouped then mapped back into letters using the reverse of the mapping above (there may be multiple ways). For example, \"11106\" can be mapped into:\n\n\"AAJF\" with the grouping (1 1 10 6)\n\"KJF\" with the grouping (11 10 6)\nNote that the grouping (1 11 06) is invalid because \"06\" cannot be mapped into 'F' since \"6\" is different from \"06\".\n\nGiven a string s containing only digits, return the number of ways to decode it.\n\nThe test cases are generated so that the answer fits in a 32-bit integer.",
+    "Tag": "Dynamic Programming Medium",
+    "Link": "https://leetcode.com/problems/decode-ways/",
+    "Difficulty": "4/10",
+    "Comment": "1. There are only two possibility here either there will\nan individual number or a dual number <=26 with no\nleading zeroes. \n\n2. Remembering the through index the number of possible\ndecoded string that could be made from there\ni.e,  s[index]=\"12\" gives 3 decoded messages when parsing ahead",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/unique-binary-search-trees/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security systems connected and it will automatically contact the police if two adjacent houses were broken into on the same night.\n\nGiven an integer array nums representing the amount of money of each house, return the maximum amount of money you can rob tonight without alerting the police.",
+    "Tag": "Dynamic Programming Medium",
+    "Link": "https://leetcode.com/problems/house-robber/",
+    "Difficulty": "5/10",
+    "Comment": "1. There are two possiblilities when it comes to robbing \n  either you will rob a house or you leave it.\n2. in case of where you leave the house you leave the possiblily\nof exploring the next adjacent house \n3. but incase you decide to rob the house you move straight to the \nnext best case that is your 2nd house from the location.\n3. you save the best / maximum robbing money at an index i as to memo\n-ize the solution in case we encounter the same in future.\n\n4. int a1 = backtrack(nums,index+1,dp)\n   int a2 = nums[index]+backtrack(nums,index+2,dp)\n\n   return dp[index]=max(a1,a2)",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "Given an integer n, return the least number of perfect square numbers that sum to n.\n\nA perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself. For example, 1, 4, 9, and 16 are perfect squares while 3 and 11 are not.",
+    "Tag": "Dynamic Programming Medium",
+    "Link": "https://leetcode.com/problems/perfect-squares/",
+    "Difficulty": "5/10",
+    "Comment": "NEED TO TRY AGAIN SINCE",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "You are given an array prices where prices[i] is the price of a given stock on the ith day.\n\nFind the maximum profit you can achieve. You may complete as many transactions as you like (i.e., buy one and sell one share of the stock multiple times) with the following restrictions:\n\nAfter you sell your stock, you cannot buy stock on the next day (i.e., cooldown one day).\nNote: You may not engage in multiple transactions simultaneously (i.e., you must sell the stock before you buy again).",
+    "Tag": "Dynamic Programming Medium",
+    "Link": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/",
+    "Difficulty": "5/10",
+    "Comment": "1.Intial intutuion is to pick a stock price and we have essentialy \n  2 major states here \n   a. we can skip the day\n   b. we can choose to do something\n\n2. the state  b again posses two states either we can decide\nto buy the stock or sell it, remember we can only selll the stock\nif we have bought one before, similary you can buy one only when\nyou don;t have a stock at the moment\n\n3. the constraint could be easily applied by delaying the buying by \n2 days",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "You are given an integer array coins representing coins of different denominations and an integer amount representing a total amount of money.\n\nReturn the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.\n\nYou may assume that you have an infinite number of each kind of coin.",
+    "Tag": "Dynamic Programming Medium",
+    "Link": "https://leetcode.com/problems/coin-change/",
+    "Difficulty": "5/10",
+    "Comment": "1. This problem had multiple branch essentially \nbecause there were no limitation on  how many times\nyou could use a coin\n2. and according to question this was also clear that you\nwill have to explore all the possible solution and memoise\n3. Coming to memoization you will have to memoise on \nthe amound part cuz that part is that is reccuring and is sub\nproblem in this case\n\n5. for x in coins\n          if amount - x >=0\n             valOnX = backtrack( amount-x)\n             min_val = min ( min_val, valOnX )\n\n\nreturn dp[amount] = min_val",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/counting-bits/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "Given an integer n, break it into the sum of k positive integers, where k >= 2, and maximize the product of those integers.\n\nReturn the maximum product you can get.",
+    "Tag": "Dynamic Programming Medium",
+    "Link": "https://leetcode.com/problems/integer-break/",
+    "Difficulty": "5/10",
+    "Comment": "1. This problem also had multiple branches since we\nhad to explore all possible solution for the product, \nand there was not limitation to the number of times a\nnumber could be used\n\n2. memoizing in this question is based on the fact that\nyou can come to a sum with different numbers but we are \ninterested in the largest product\n\n3.we store the  largest product for a perticular sum ie. \nthe  number with largest product for given sum\n\n4 .for i in 1-- n \n        int productForI = i*backtrack(sum-i)\n             max_val=max(max_val,productForI\n\n     dp[sum] = max_val",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/count-numbers-with-unique-digits/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/wiggle-subsequence/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "Given a non-empty array nums containing only positive integers, find if the array can be partitioned into two subsets such that the sum of elements in both subsets is equal.",
+    "Tag": "Dynamic Programming Medium",
+    "Link": "https://leetcode.com/problems/partition-equal-subset-sum/",
+    "Difficulty": "7/10",
+    "Comment": "1. initial intiution for whether a solution exist or not could \nbe taken from the fact that you could only find a solution if\nthe sum of nums is even otherwise it always would be false\n\n2. we can iterate though the number with two choices at hand\nof either picking the current element or leaving it . solution in either \ncase (ie true ) would lead to a solution\n\n3. since there could be possibility for mulitple solution since we can\nhave dublicate but the series of number chosen would always be same\nand hence memoization is possible (not trivial but possible)\n\n4. we here memoise based on whether we have seen the state of peticular\nindex with the sum or not\n\n5.  if nums[index> <=sum\n            // we have choice of choosing this number\n             dp[index][sum] = back(nums,sum-nums[index]) || backtrack(nums,sum)\n\n      return dp[index][sum] = backtrack(nums,sum,index+1)",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "You are given an array of n pairs pairs where pairs[i] = [lefti, righti] and lefti < righti.\n\nA pair p2 = [c, d] follows a pair p1 = [a, b] if b < c. A chain of pairs can be formed in this fashion.\n\nReturn the length longest chain which can be formed.\n\nYou do not need to use up all the given intervals. You can select pairs in any order.",
+    "Tag": "Dynamic Programming Medium",
+    "Link": "https://leetcode.com/problems/maximum-length-of-pair-chain/",
+    "Difficulty": "7/10",
+    "Comment": "1. The trick is to sort the pairs on the basis of second\nvalue. \n2. once sorted we are left with two choices of either picking\nup the current element or leaving it, this decision is further \nbased on the fact that we could only pick this element based on the\nprevious solution\n\n3. when choosing this element we will add 1 to the length , and while leaving\nwe will not \n4. memoization is based on the fact that we certainly could have multiple\nchains for a perticular pairs but we are interested in only largest one\nso we will memoise based on our choice\n\n            if(condtion of previ)\n                  ans = 1+backtrack(including the element)\n           ans2 = backtrack(excluding element)\n\n          dp[index]=max(ans,ans2)\n          since we are interested in the maximum achievable chain",
+    "Needs revisit rating": "Need to revisit",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "You are given an integer array nums. You want to maximize the number of points you get by performing the following operation any number of times:\n\nPick any nums[i] and delete it to earn nums[i] points. Afterwards, you must delete every element equal to nums[i] - 1 and every element equal to nums[i] + 1.\nReturn the maximum number of points you can earn by applying the above operation some number of times.",
+    "Tag": "Dynamic Programming Medium",
+    "Link": "https://leetcode.com/problems/delete-and-earn/",
+    "Difficulty": "7/10",
+    "Comment": "1. Solution consist of a non trivial approach of starting \nbacktracking from the max Number present in the array\nsomething to be either aware of.\n\n2.further the problem is broken down into much simpler\nform of points that we will gain by picking up a perticular number\nform the array.\n3.the recursion part starts from the maximum number that we can pick\nto alternating the choice of picking up an element \n\n4. picking up any element means that we have to pick up all the \noccurance of it since picking one/ picking all doesn't have any side\n effect to the next state\n\n5, Base condition is either you land on 1 or 0 in case you land on 1 you\n get the points at 1 if any otherwise at 0 there is nothing \n\n6  return cache[num] = max(gainAtNum+backtrack(n-2),backtrack(n-1))",
+    "Needs revisit rating": "Solution written here is pretty selp explenetory  :: https://leetcode.com/problems/delete-and-earn/solution/",
+    "": ""
+  },
+  {
+    "Description": "You have two types of tiles: a 2 x 1 domino shape and a tromino shape. You may rotate these shapes.\nGiven an integer n, return the number of ways to tile an 2 x n board. Since the answer may be very large, return it modulo 109 + 7.\n\nIn a tiling, every square must be covered by a tile. Two tilings are different if and only if there are two 4-directionally adjacent cells on the board such that exactly one of the tilings has both squares occupied by a tile.",
+    "Tag": "Dynamic Programming Medium",
+    "Link": "https://leetcode.com/problems/domino-and-tromino-tiling/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "The chess knight has a unique movement, it may move two squares vertically and one square horizontally, or two squares horizontally and one square vertically (with both forming the shape of an L). The possible movements of chess knight are shown in this diagaram:\n\nA chess knight can move as indicated in the chess diagram below:\nWe have a chess knight and a phone pad as shown below, the knight can only stand on a numeric cell (i.e. blue cell).\n\nGiven an integer n, return how many distinct phone numbers of length n we can dial.\n\nYou are allowed to place the knight on any numeric cell initially and then you should perform n - 1 jumps to dial a number of length n. All jumps should be valid knight jumps.\n\nAs the answer may be very large, return the answer modulo 109 + 7.",
+    "Tag": "Dynamic Programming Medium",
+    "Link": "https://leetcode.com/problems/knight-dialer/",
+    "Difficulty": "5/10",
+    "Comment": "1.Initilal intuition is to pick the places to start, as the question states\nthat we could start at any point on the keypad\n\n2. at any state on keypad we can transition to next 8 states or in other \nwords we have 8 choices to choose from ( only restraint is to make a valid\nknight move )\n\n3. memoization is also pretty trivial here where we have to store the state\nsuch we know with the postion in hand whether we have seen the nth number\nbefore.\n\n4. memo[n][row][col] = moves before\n\n5. choices at hande\n      a. moving up with either moving left || right\n      b.moving down with either moving left || right\n      c. moving sideways either up || down",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "You have planned some train traveling one year in advance. The days of the year in which you will travel are given as an integer array days. Each day is an integer from 1 to 365.\n\nTrain tickets are sold in three different ways:\n\na 1-day pass is sold for costs[0] dollars,\na 7-day pass is sold for costs[1] dollars, and\na 30-day pass is sold for costs[2] dollars.\nThe passes allow that many days of consecutive travel.\n\nFor example, if we get a 7-day pass on day 2, then we can travel for 7 days: 2, 3, 4, 5, 6, 7, and 8.\nReturn the minimum number of dollars you need to travel every day in the given list of days.",
+    "Tag": "Dynamic Programming Medium",
+    "Link": "https://leetcode.com/problems/minimum-cost-for-tickets/",
+    "Difficulty": "5/10",
+    "Comment": "1.This problem (there are similar problems as well)\nis where you need to think the other way round. the other way \nround is not so difficult if you see\n2.Initution is to start with all the days and skip those which don't apply\n3. when we are at a day where we want to purchase a ticket, we are\nsupposed to make a choice from the proposed 3\n\n4. memoization is also pretty straight forward where, if you have seen\nthe day before you simply give the solution to that day\n\n             a. p1 = c1+backtrack(day+1)\n             b. p7 = c2+backtrack(day+7)\n             c.p30 = c3+backtrack(day+30)\n\n\n         return dp[day] = min(p1,p7,p30)",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "Given an integer array arr, partition the array into (contiguous) subarrays of length at most k. After partitioning, each subarray has their values changed to become the maximum value of that subarray.\n\nReturn the largest sum of the given array after partitioning. Test cases are generated so that the answer fits in a 32-bit integer.",
+    "Tag": "Dynamic Programming Medium",
+    "Link": "https://leetcode.com/problems/partition-array-for-maximum-sum/",
+    "Difficulty": "5/10",
+    "Comment": "1. The intitution by reading this problem was to traverse\nthe whole array and at each index making the decision\nto pick 0 to k element\n2. it is essential to use the maximum of the index ---- index+k\nelement to make as per the question and it trivialy calculated\n3. memoization also revolves around the fact that at perticular\nindex we will have max solution\n\n4.  for i in index--- index+k:\n          ans =  max_value*i-index+1 + backtrack(i+1)\n          max_val = max(ans,max_val)\n\n\n     return memo[index] = max_val",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "You are given an array books where books[i] = [thicknessi, heighti] indicates the thickness and height of the ith book. You are also given an integer shelfWidth.\n\nWe want to place these books in order onto bookcase shelves that have a total width shelfWidth.\n\nWe choose some of the books to place on this shelf such that the sum of their thickness is less than or equal to shelfWidth, then build another level of the shelf of the bookcase so that the total height of the bookcase has increased by the maximum height of the books we just put down. We repeat this process until there are no more books to place.\n\nNote that at each step of the above process, the order of the books we place is the same order as the given sequence of books.\n\nFor example, if we have an ordered list of 5 books, we might place the first and second book onto the first shelf, the third book on the second shelf, and the fourth and fifth book on the last shelf.\nReturn the minimum possible height that the total bookshelf can be after placing shelves in this manner.",
+    "Tag": "Dynamic Programming Medium",
+    "Link": "https://leetcode.com/problems/filling-bookcase-shelves/",
+    "Difficulty": "5/10",
+    "Comment": "1.Initial intution is to pick the books and put them on \nshelf up untill the shelf is full on capacity\n2. while putting the books on the shelf we backtrack to\nfill other shelfs with height of  tallest book on the previous shelf\n3. memoization is based on the fact that whether previously we have\nseen the maximum value or not  for this book",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/longest-arithmetic-subsequence-of-given-difference/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "Given an array nums of integers, we need to find the maximum possible sum of elements of the array such that it is divisible by three.",
+    "Tag": "Dynamic Programming Medium",
+    "Link": "https://leetcode.com/problems/greatest-sum-divisible-by-three/",
+    "Difficulty": "6/10",
+    "Comment": "1. the basic idea is either pick or not pick an element\nand not. at the end of each iteration we either end up with\na number that is a divisible by 3 or not\n2. for each  index we have three possiblilties based on the \nmodulo3 dp[index][0] dp[index][1] dp[index][2]\n\n3. we will leverage this property to store few repetative states",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "You are given an array prices where prices[i] is the price of a given stock on the ith day.\n\nFind the maximum profit you can achieve. You may complete at most two transactions.\n\nNote: You may not engage in multiple transactions simultaneously (i.e., you must sell the stock before you buy again).",
+    "Tag": "Dynamic Programming Medium",
+    "Link": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/",
+    "Difficulty": "6/10",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "An attendance record for a student can be represented as a string where each character signifies whether the student was absent, late, or present on that day. The record only contains the following three characters:\n\n'A': Absent.\n'L': Late.\n'P': Present.\nAny student is eligible for an attendance award if they meet both of the following criteria:\n\nThe student was absent ('A') for strictly fewer than 2 days total.\nThe student was never late ('L') for 3 or more consecutive days.\nGiven an integer n, return the number of possible attendance records of length n that make a student eligible for an attendance award. The answer may be very large, so return it modulo 109 + 7.",
+    "Tag": "Dynamic Programming Hard",
+    "Link": "https://leetcode.com/problems/student-attendance-record-ii/",
+    "Difficulty": "7/10",
+    "Comment": "1. Initial intitution is to pick the day to be either present\nabsent, or late.\n2. the contraint that essentially narrows the scope of the \nproblem are\n       a. you could afford to have only 1 absent overall\n       b. you could only have 2 consicutive late days\n       c. and there is no constraint on the number of present\n\n3. The special part to consider is that after we reach the acceptable\nstate we consider that as a solution, so base condition will return\n1\n\n4. memoization could be found by a little logic by considering the fact\nthat we could have a day as late, absent or present\n\n5. important part for these questions is that the functional overhead\n ie. solution with recursion will lead to a tle. therefore we will have to look\nfor tabulation method",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "A message containing letters from A-Z can be encoded into numbers using the following mapping:\n\n'A' -> \"1\"\n'B' -> \"2\"\n...\n'Z' -> \"26\"\nTo decode an encoded message, all the digits must be grouped then mapped back into letters using the reverse of the mapping above (there may be multiple ways). For example, \"11106\" can be mapped into:\n\n\"AAJF\" with the grouping (1 1 10 6)\n\"KJF\" with the grouping (11 10 6)\nNote that the grouping (1 11 06) is invalid because \"06\" cannot be mapped into 'F' since \"6\" is different from \"06\".\n\nIn addition to the mapping above, an encoded message may contain the '*' character, which can represent any digit from '1' to '9' ('0' is excluded). For example, the encoded message \"1*\" may represent any of the encoded messages \"11\", \"12\", \"13\", \"14\", \"15\", \"16\", \"17\", \"18\", or \"19\". Decoding \"1*\" is equivalent to decoding any of the encoded messages it can represent.\n\nGiven a string s consisting of digits and '*' characters, return the number of ways to decode it.\n\nSince the answer may be very large, return it modulo 109 + 7.",
+    "Tag": "Dynamic Programming Hard",
+    "Link": "https://leetcode.com/problems/decode-ways-ii/",
+    "Difficulty": "7/10",
+    "Comment": "1. This question is similar to the decode ways only with the a change\nthat the string could also contain  *  which could be replaced with any\nnumber from 1-9, \n\n2. at each step we have a choice to group the element either as single\nor as a group where the group value combined will be in range of 1-26 for obvious regions\n\n3.  some important point or the edge cases\n        a. in case of astrik * which will we can have following conditions * (nums) OR **\n        in the 1 case ie\n        * nums -> we could have two situation here , if *==1 then nums could be anything\n                                                                              , if *==2 then nums could be [1-6]\n\n       b. for ** it could have 15 possibilities and hence the solution becomes\n                    15 X backtrack(index+2)\n      c. for singular * we could have 9 possibilities\n\n\n4. memoization would be on index bases i.e the number of solution that exist for index i in",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "Dynamic Programming Hard",
+    "Link": "https://leetcode.com/problems/triples-with-bitwise-and-equal-to-zero/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "We have n jobs, where every job is scheduled to be done from startTime[i] to endTime[i], obtaining a profit of profit[i].\n\nYou're given the startTime, endTime and profit arrays, return the maximum profit you can take such that there are no two jobs in the subset with overlapping time range.\n\nIf you choose a job that ends at time X you will be able to start another job that starts at time X",
+    "Tag": "Dynamic Programming Hard",
+    "Link": "https://leetcode.com/problems/maximum-profit-in-job-scheduling/",
+    "Difficulty": "7/10",
+    "Comment": "1. Initial intutution was to make the pairs of < s,<e,p>>. and then\nsort the vector with first element or we can also do it with the second one\n2. backtrack to all the branches and pick the pair which can make two tasks\nschedulable back to back\n3. at every point or index you could find the very next pair in the vector which\ncan be scheduled just after the end of this task\n4. Memoization is based on the index ie. \n                dp[index] = max(take,not_take) \n              where take and not_take is the choice of picking up this element \nor not picking up this solution",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/minimum-number-of-taps-to-open-to-water-a-garden/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/count-all-valid-pickup-and-delivery-options/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/stone-game-iii/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/restore-the-array/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/form-largest-integer-with-digits-that-add-up-to-target/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/stone-game-iv/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/coin-change-2/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "2.Knapsack",
+    "Tag": "",
+    "Link": "",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed. All houses at this place are arranged in a circle. That means the first house is the neighbor of the last one. Meanwhile, adjacent houses have a security system connected, and it will automatically contact the police if two adjacent houses were broken into on the same night.\n\nGiven an integer array nums representing the amount of money of each house, return the maximum amount of money you can rob tonight without alerting the police.",
+    "Tag": "Dynamic Programming Medium",
+    "Link": "https://leetcode.com/problems/house-robber-ii/",
+    "Difficulty": "5/10",
+    "Comment": "1. Similar to house of robber 1 problem we are left with\ntwo choices at hand for each house or either robbing it \nor leaving it. the only difference is or picking up the 1st \nhouse restricts us to not rob the nth house since they are\nadjacent to each other\n\n2. so the problem again breaks into two similar problem of\neither robbing the 1st house and hence not robbing the last house\nOR \nleaving the first house and robbing the last one ||\n\nSo the problem becomes\n         A1 = House_of_Robber(including the first element )\n         A2 = House_of_Robber(excluding the firse element)\n\n\n        return max( A1 , A2)",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "You are given an array of binary strings strs and two integers m and n.\n\nReturn the size of the largest subset of strs such that there are at most m 0's and n 1's in the subset.\n\nA set x is a subset of a set y if all elements of x are also elements of y.",
+    "Tag": "Dynamic Programming Medium",
+    "Link": "https://leetcode.com/problems/ones-and-zeroes/",
+    "Difficulty": "6/10",
+    "Comment": "1. Initial intution was to traverse the whole collection and pick or  not pick the string \nbased on whether it satisfies the condition of number of zeros & ones, \n2. if it does satisfies the conditon then we are left with 2 choices one is to pick the \nthe strinng and reduce the respective 0's and 1's or to not pick and move to next string\n           a. backtrack(index,n_zeros,n_ones) \n            b. backtrack(index,m,n)\n\n3. if in case the condition is not satisfies then we will have to move to next string \n4. memoization is based on the state that at each point we will have an index and a \ncertain number of m's and n's \n5. dp[index][m][n]=ans",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/target-sum/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/shopping-offers/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/2-keys-keyboard/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/minimum-swaps-to-make-sequences-increasing/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/best-team-with-no-conflicts/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/profitable-schemes/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/tallest-billboard/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/pizza-with-3n-slices/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/reducing-dishes/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "3.Multi Dimensions DP",
+    "Tag": "",
+    "Link": "",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/triangle/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/combination-sum-iv/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/out-of-boundary-paths/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/knight-probability-in-chessboard/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/champagne-tower/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/largest-sum-of-averages/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/minimum-falling-path-sum/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/video-stitching/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/longest-arithmetic-subsequence/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/stone-game-ii/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/dice-roll-simulation/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/number-of-sets-of-k-non-overlapping-line-segments/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/create-maximum-number/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/frog-jump/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/split-array-largest-sum/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/freedom-trail/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/minimum-number-of-refueling-stops/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/number-of-music-playlists/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/count-vowels-permutation/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/minimum-falling-path-sum-ii/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/minimum-distance-to-type-a-word-using-two-fingers/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/minimum-difficulty-of-a-job-schedule/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/number-of-ways-to-paint-n-3-grid/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/build-array-where-you-can-find-the-maximum-exactly-k-comparisons/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/number-of-ways-of-cutting-a-pizza/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/paint-house-iii/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/count-all-possible-routes/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "4.Interval DP",
+    "Tag": "",
+    "Link": "",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/guess-number-higher-or-lower-ii/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/arithmetic-slices/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/predict-the-winner/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/palindromic-substrings/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/stone-game/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/minimum-score-triangulation-of-polygon/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/last-stone-weight-ii/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/minimum-cost-tree-from-leaf-values/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/stone-game-vii/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/burst-balloons/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/remove-boxes/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/strange-printer/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/valid-permutations-for-di-sequence/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/minimum-cost-to-merge-stones/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/allocate-mailboxes/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/minimum-cost-to-cut-a-stick/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/stone-game-v/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "5.bit DP",
+    "Tag": "",
+    "Link": "",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/can-i-win/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/partition-to-k-equal-sum-subsets/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/stickers-to-spell-word/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/shortest-path-visiting-all-nodes/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/smallest-sufficient-team/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/maximum-students-taking-exam/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/number-of-ways-to-wear-different-hats-to-each-other/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/minimum-cost-to-connect-two-groups-of-points/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/maximum-number-of-achievable-transfer-requests/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/distribute-repeating-integers/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/maximize-grid-happiness/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "6.Digit DP",
+    "Tag": "",
+    "Link": "",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/non-negative-integers-without-consecutive-ones/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/numbers-at-most-n-given-digit-set/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/numbers-with-repeated-digits/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "7.DP on Trees",
+    "Tag": "",
+    "Link": "",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/unique-binary-search-trees-ii/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/house-robber-iii/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/maximum-product-of-splitted-binary-tree/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/linked-list-in-binary-tree/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/longest-zigzag-path-in-a-binary-tree/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/binary-tree-cameras/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/maximum-sum-bst-in-binary-tree/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/number-of-ways-to-reorder-array-to-get-same-bst/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "8.String DP",
+    "Tag": "",
+    "Link": "",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/is-subsequence/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/palindrome-partitioning/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/palindrome-partitioning-ii/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "Given a string s and a dictionary of strings wordDict, return true if s can be segmented into a space-separated sequence of one or more dictionary words.\n\nNote that the same word in the dictionary may be reused multiple times in the segmentation.",
+    "Tag": "Dynamic Programming medium",
+    "Link": "https://leetcode.com/problems/word-break/",
+    "Difficulty": "6/10",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/unique-substrings-in-wraparound-string/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/longest-string-chain/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/longest-happy-string/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/longest-valid-parentheses/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/distinct-subsequences/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/word-break-ii/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/count-the-repetitions/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/concatenated-words/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/count-different-palindromic-subsequences/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/distinct-subsequences-ii/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/longest-chunked-palindrome-decomposition/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/palindrome-partitioning-iii/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/find-all-good-strings/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/string-compression-ii/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/number-of-ways-to-form-a-target-string-given-a-dictionary/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "9.Probability DP",
+    "Tag": "",
+    "Link": "",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/soup-servings/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/new-21-game/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  },
+  {
+    "Description": "",
+    "Tag": "",
+    "Link": "https://leetcode.com/problems/airplane-seat-assignment-probability/",
+    "Difficulty": "",
+    "Comment": "",
+    "Needs revisit rating": "",
+    "": ""
+  }
+]
