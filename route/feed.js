@@ -13,4 +13,8 @@ router.get('/posts',feedController.getPosts)
 router.get('/post/:postId',feedController.getPost)
 //Post new question
 router.post('/posts',isAuth,feedController.createPost)
+//put update new question
+router.put('/post/:postId',isAuth,feedController.updatePost)
+//Delete the question
+router.delete('/post/:postId',isAuth,feedController.deletePost)
 module.exports = router
