@@ -33,6 +33,7 @@ const questionSchema = new Schema({
     },
     Creator:{
         type:Schema.Types.ObjectId,
+        ref:'User',
         required:true
     }
 })
