@@ -1,0 +1,13 @@
+    name: run Generate sript
+    on:
+        repository_dispatch: 
+            types: [Trigger Workflow]
+
+    jobs:
+        trigger:
+            runs-on: ubuntu-latest
+            steps:
+                - run: echo 'Triggered Workflow'
+                - name: checkout
+                  uses: actions/checkout@v3
+                  
