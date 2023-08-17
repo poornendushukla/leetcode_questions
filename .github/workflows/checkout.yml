@@ -23,7 +23,7 @@ jobs:
           uses: actions/checkout@v3
           with:
             repository: poornendushukla/realTimeTable
-            token: ${{secrets.ACTIONS_KEY}}    
+            token: ${{secrets.GITHUB_TOKEN}}    
             path: otherRepo/main
 
         - name: setup node
