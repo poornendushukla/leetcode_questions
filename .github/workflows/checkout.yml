@@ -29,7 +29,7 @@ jobs:
           with:
             repository: poornendushukla/realTimeTable
             token: ${{secrets.GITHUB_TOKEN}}    
-            path: otherRepo/main
+            path: otherRepo
 
         - name: setup node
           uses: actions/setup-node@v3
@@ -37,7 +37,7 @@ jobs:
             node-version: 14
 
 
-        - name: 
+        - name: chekcout multiple branches
           run: |
             echo "ROOT"
             ls -la
@@ -45,10 +45,17 @@ jobs:
             cd main
             ls -la
             cd ..
-            echo "other/Repo"
-            cd other/Repo
+            echo "otherRepo"
+            cd otherRepo
             ls -la
-            
+        - name: Installing packages in ui-common 
+          run: |
+            echo "installing packages"
+            cd main
+            npm ci
+            echo $PATH
+
+
 
         
 
