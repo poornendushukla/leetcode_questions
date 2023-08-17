@@ -48,14 +48,14 @@ jobs:
             echo "otherRepo"
             cd otherRepo
             ls -la
-            echo "PATH=$pwd">>$GITHUB_ENV
+            repoPath=pwd
 
         - name: Installing packages in ui-common 
           run: |
             echo "installing packages"
             cd main
             npm ci
-            echo ${{env.PATH}} 
+            echo $repoPath 
 
 
 
