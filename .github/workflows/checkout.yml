@@ -19,6 +19,11 @@ jobs:
      runs-on: ubuntu-latest
 
      steps:
+        - name: cdgc-ui-common
+          uses: actions/checkout@v3
+          with:
+            path: main
+
         - name: checkout repo
           uses: actions/checkout@v3
           with:
@@ -32,12 +37,18 @@ jobs:
             node-version: 14
 
 
-        - name: push generate translations
+        - name: 
           run: |
-            ls -la
             echo "ROOT"
-            cd otherRepo/main
             ls -la
+            echo "cdgc-ui-common"
+            cd main
+            ls -la
+            cd ..
+            echo "other/Repo"
+            cd other/Repo
+            ls -la
+            
 
         
 
