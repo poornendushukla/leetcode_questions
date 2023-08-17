@@ -50,12 +50,13 @@ jobs:
             ls -la
             repoPath=pwd
 
+
         - name: Installing packages in ui-common 
           run: |
             echo "installing packages"
             cd main
             npm ci
-            echo $repoPath 
+            $repoPath
 
 
 
