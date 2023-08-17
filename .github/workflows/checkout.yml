@@ -40,10 +40,10 @@ jobs:
         - name: Installing packages in ui-common 
           run: |
             echo "installing packages"
+            echo 'some ${GITHUB_PATH}'
             echo "dev_user_name=${{ GTIHUB }}" >> "$GITHUB_ENV"
             cd main
             npm ci
-            echo 'some ${GITHUB_PATH}'
             npm run generate -- --source '$DIR'
 
         # - name: capture actor
