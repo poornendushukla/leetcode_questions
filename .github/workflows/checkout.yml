@@ -48,7 +48,7 @@ jobs:
             echo "otherRepo"
             cd otherRepo
             ls -la
-            repoPath=pwd
+            pwd
 
 
         - name: Installing packages in ui-common 
@@ -56,7 +56,7 @@ jobs:
             echo "installing packages"
             cd main
             npm ci
-            $repoPath
+            
 
 
 
