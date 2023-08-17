@@ -41,9 +41,10 @@ jobs:
           run: |
             echo "installing packages"
             echo 'some ${GITHUB_PATH}'
-            echo "dev_user_name=${{ GTIHUB }}" >> "$GITHUB_ENV"
+            echo "dev_user_name=$GTIHUB_PATH" >> "$GITHUB_ENV"
             cd main
             npm ci
+            echo ${{env.dev_user_name}}
             npm run generate -- --source '$DIR'
 
         # - name: capture actor
