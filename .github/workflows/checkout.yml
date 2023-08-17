@@ -1,0 +1,43 @@
+# repository_dispatch api triggered workflow
+# event_type "Triggered Workflow"
+# to do 
+# steps
+# checkout csms seed branch of interest
+# regenrate the labels
+# push if the labels if changed
+
+name: generate script
+
+on:
+    repository_dispatch: 
+        types: [Trigger Workflow]
+
+jobs:
+    generate:
+     name: generate seed
+     runs-on: self-hosted
+
+     steps:
+        - name: checkout repo
+          uses: actions/checkout@v3
+          with:
+            repository: poornendushukla/realTimeTable
+            token: ${{secrets.ACTIONS_KEY}}    
+            path: otherRepo/main
+
+        - name: setup node
+          uses: action/setup-node@v3
+          with:
+            node-version: 14
+
+
+        - name: push generate translations
+          run: |
+            ls -la
+            echo "ROOT"
+            cd otherRepo/main
+            ls -la
+
+        
+
+
