@@ -53,7 +53,7 @@ jobs:
             echo "installing packages"
             cd main
             npm ci
-            echo $PATH
+            echo __dirname
 
 
 
