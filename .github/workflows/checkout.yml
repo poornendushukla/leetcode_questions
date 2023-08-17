@@ -9,8 +9,9 @@
 name: generate script
 
 on:
-    repository_dispatch: 
-        types: [Trigger Workflow]
+    push:
+        branches:
+              - main
 
 jobs:
     generate:
