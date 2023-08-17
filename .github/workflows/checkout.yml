@@ -16,7 +16,7 @@ on:
 jobs:
     generate:
      name: generate seed
-     runs-on: self-hosted
+     runs-on: ubuntu-latest
 
      steps:
         - name: checkout repo
