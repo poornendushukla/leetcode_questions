@@ -55,7 +55,7 @@ jobs:
             echo "installing packages"
             cd main
             npm ci
-            npm run generate -- --source ${{env.PATH}} 
+            echo ${{env.PATH}} 
 
 
 
