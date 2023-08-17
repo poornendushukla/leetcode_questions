@@ -27,7 +27,7 @@ jobs:
             path: otherRepo/main
 
         - name: setup node
-          uses: action/setup-node@v3
+          uses: actions/setup-node@v3
           with:
             node-version: 14
 
