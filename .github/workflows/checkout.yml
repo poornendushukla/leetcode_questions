@@ -45,7 +45,6 @@ jobs:
             cd main
             npm ci
             echo ${{env.dev_user_name}}
-            npm run generate -- --source '$DIR'
 
         # - name: capture actor
         #   run: |
