@@ -11,7 +11,7 @@ name: generate script
 on:
     push:
         branches:
-              - main
+              - feature/test
 
 jobs:
     generate:
@@ -22,7 +22,7 @@ jobs:
         - name: cdgc-ui-common
           uses: actions/checkout@v3
           with:
-            path: main
+            path: ui-common
 
         - name: checkout repo
           uses: actions/checkout@v3
@@ -40,27 +40,25 @@ jobs:
           with:
             node-version: 14
 
-
         - name: Installing packages in ui-common 
           run: |
             echo "installing packages"
-            echo 'some ${GITHUB_PATH}'
             echo "dev_user_name=$GTIHUB_PATH" >> "$GITHUB_ENV"
             cd main
             npm ci
-            echo "soem ${{env.REPO_PATH}}"
+            echo "${{env.REPO_PATH}}"
 
         # - name: capture actor
         #   run: |
         #     echo "dev_user_name=${{ github.actor }}" >> "$GITHUB_ENV"
         #     node -e "console.log('dev_user_email=', '${{ github.actor }}'.split('_')[0] + '@informatica.com')" >> "$GITHUB_ENV"\
           
-        # - name: push generated controllers
+        # - name: push generated translations 
         #   run: |
         #     git pull origin
         #     git status
         #     git add --all
-        #     git commit -a -m "auto generated controllers" || echo ""
+        #     git commit -a -m "auto generated seed translations" || echo ""
         #     git push
         #   env:
         #     GIT_AUTHOR_NAME: ${{ env.dev_user_name }}
