@@ -11,7 +11,7 @@ name: generate script
 on:
     push:
         branches:
-              - feature/test
+              - main
 
 jobs:
     generate:
