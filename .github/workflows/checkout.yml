@@ -46,6 +46,7 @@ jobs:
             echo "dev_user_name=$GTIHUB_PATH" >> "$GITHUB_ENV"
             cd main
             npm ci
+            rm -rf node_modules
             echo "${{env.REPO_PATH}}"
 
         # - name: capture actor
