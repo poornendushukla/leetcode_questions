@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const feedRoutes = require('./route/feed')
 const authRoutes = require('./route/auth')
+const blogRoutes = require('./route/blog')
 const adminRoutes = require('./route/admin')
 const morgan = require('morgan')
 
@@ -35,6 +36,7 @@ app.use(morgan((tokens,req,res)=>{
 app.use('/leetcode',feedRoutes)
 app.use('/auth',authRoutes)
 app.use('/admin',adminRoutes)
+app.use('/personal',blogRoutes)
 app.use((error,req,res,next)=>{
     const {statusCode,message,data} = error
     console.log(error)
